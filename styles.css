@@ -37,7 +37,7 @@ button:hover {
   background-color: #ffe6ec;
 }
 
-/* Mensaje oculto pero ocupa espacio, invisible y no interactúa */
+/* Mensaje inicialmente oculto: opacity 0, no interactúa */
 #mensaje {
   margin-top: 30px;
   font-size: 1.5em;
@@ -46,7 +46,7 @@ button:hover {
   transition: opacity 0.7s ease;
 }
 
-/* Mensaje visible con fade-in */
+/* Mensaje visible */
 #mensaje.aparecer {
   opacity: 1;
   pointer-events: auto;
@@ -62,23 +62,23 @@ button:hover {
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  display: block; /* para que ocupe espacio aunque invisible */
+  display: block;
 }
 
-/* Foto visible con animación fade + zoom */
+/* Foto visible con fade + zoom */
 #mensaje img.aparecer {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Ocultar elementos con opacidad y transición */
+/* Oculto */
 .oculto {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0 !important;
+  pointer-events: none !important;
   transform: scale(0.8);
 }
 
-/* Animación de desaparecer para título y botón */
+/* Desaparecer */
 .desaparecer {
   opacity: 0;
   transition: opacity 0.5s ease;

@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="titulo">haz click para algo bonito sophi bonita</h1>
-    <button id="boton" onclick="mostrarMensaje()">click aki para algo bonito mi amorchis</button>
+    <h1 id="titulo">ya aterrizaste mi amorchiiiis, haz click para algo bonito sophi bonita</h1>
+    <button id="boton" onclick="mostrarMensaje()">click aki mi amorchis</button>
     
     <div id="mensaje" class="oculto">
-      <p>Te amo mucho mucho con todo mi corazoncito a kilometros de distancia mi niña hermosa 💗💗💗💗💗💗💗💗</p>
+      <p>Te amo y te adoro muchoo muchisimoooo aun a kilometros de dsitancia mi amoooor 💗💗💗💗💗💗💗💗</p>
       <img src="foto.jpg" alt="Foto bonita" id="foto" class="oculto">
     </div>
   </div>
@@ -31,14 +31,21 @@
         titulo.style.display = 'none';
         boton.style.display = 'none';
 
-        // Mostrar mensaje con animación
+        // Mostrar mensaje: primero quitar "oculto" y mostrar en opacity:0
         mensaje.classList.remove('oculto');
-        mensaje.classList.add('aparecer');
 
-        // Mostrar la foto después de 1 segundo
+        // Forzar pequeño delay para que la transición de opacidad funcione
+        setTimeout(() => {
+          mensaje.classList.add('aparecer');
+        }, 10);
+
+        // Mostrar foto después de 1 segundo
         setTimeout(() => {
           foto.classList.remove('oculto');
-          foto.classList.add('aparecer');
+          // Igual, con pequeño delay para animación
+          setTimeout(() => {
+            foto.classList.add('aparecer');
+          }, 10);
         }, 1000);
       }, 500);
     }
