@@ -40,6 +40,12 @@ button:hover {
 #mensaje {
   margin-top: 30px;
   font-size: 1.5em;
+  opacity: 0;
+  display: none;
+}
+
+#mensaje.aparecer {
+  animation: fadeIn 0.7s forwards;
 }
 
 #mensaje img {
@@ -50,7 +56,11 @@ button:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: scale(0.8);
-  transition: none;
+  display: none;
+}
+
+#mensaje img.aparecer {
+  animation: fadeZoomIn 0.7s forwards;
   display: block;
 }
 
@@ -58,10 +68,6 @@ button:hover {
   display: none;
   opacity: 0;
   transform: scale(0.8);
-}
-
-.aparecer {
-  animation: fadeZoomIn 0.7s forwards;
 }
 
 .desaparecer {
@@ -73,5 +79,12 @@ button:hover {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    display: block;
   }
 }

@@ -12,7 +12,7 @@
     <button id="boton" onclick="mostrarMensaje()">click aki para algo bonito mi amorchis</button>
     
     <div id="mensaje" class="oculto">
-      <p>Te amo muchomucho con todo mi corazoncito a kilómetros de distancia mi niña hermosa 💗💗💗</p>
+      <p>Te amo mucho mucho con todo mi corazoncito a kilometros de distancia mi niña hermosa 💗💗💗💗💗💗💗💗</p>
       <img src="foto.jpg" alt="Foto bonita" id="foto" class="oculto">
     </div>
   </div>
@@ -30,9 +30,12 @@
       setTimeout(() => {
         titulo.style.display = 'none';
         boton.style.display = 'none';
-        mensaje.classList.remove('oculto');
 
-        // Mostrar la foto después de 1.5 segundos
+        // Mostrar mensaje con animación
+        mensaje.classList.remove('oculto');
+        mensaje.classList.add('aparecer');
+
+        // Mostrar la foto después de 1 segundo
         setTimeout(() => {
           foto.classList.remove('oculto');
           foto.classList.add('aparecer');
