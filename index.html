@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Sophi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo">haz click para algo bonito sophi bonita</h1>
+    <button id="boton" onclick="mostrarMensaje()">click aki para algo bonito mi amorchis</button>
+    
+    <div id="mensaje" class="oculto">
+      <p>Te amo muchomucho con todo mi corazoncito a kilómetros de distancia mi niña hermosa 💗💗💗</p>
+      <img src="foto.jpg" alt="Foto bonita" id="foto" class="oculto">
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      const titulo = document.getElementById('titulo');
+      const boton = document.getElementById('boton');
+      const mensaje = document.getElementById('mensaje');
+      const foto = document.getElementById('foto');
+
+      titulo.classList.add('desaparecer');
+      boton.classList.add('desaparecer');
+
+      setTimeout(() => {
+        titulo.style.display = 'none';
+        boton.style.display = 'none';
+        mensaje.classList.remove('oculto');
+
+        // Mostrar la foto después de 1.5 segundos
+        setTimeout(() => {
+          foto.classList.remove('oculto');
+          foto.classList.add('aparecer');
+        }, 1000);
+      }, 500);
+    }
+  </script>
+</body>
+</html>
