@@ -83,3 +83,16 @@ button:hover {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
+button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: white;
+  color: #f28ca3;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 40px;  /* margen aumentado */
+}
