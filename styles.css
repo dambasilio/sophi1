@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f28ca3; /* rojo rosado pastel */
+  background-color: #f28ca3;
   color: white;
-  height: 100vh;             /* Ocupa toda la ventana */
+  min-height: 100vh;
   display: flex;
-  justify-content: center;   /* Centra horizontal */
-  align-items: center;       /* Centra vertical */
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -14,15 +15,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;              /* Altura para centrar contenido */
-  justify-content: center;   /* Centra vertical */
+  justify-content: center;
   max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 2em;
-  margin: 0;                 /* Sin margen para mejor centrado */
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1.4;
 }
 
 button {
@@ -35,31 +40,29 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
-  margin-top: 40px;          /* separación hacia abajo */
+  margin: 0;
 }
 
 button:hover {
   background-color: #ffe6ec;
 }
 
-/* Mensaje inicialmente invisible e inactivo */
 #mensaje {
-  margin-top: 30px;
   font-size: 1.5em;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.7s ease;
+  width: 100%;
+  margin: 0;
 }
 
-/* Mensaje visible */
 #mensaje.aparecer {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Foto inicialmente invisible y pequeña */
 #mensaje img {
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
   max-width: 100%;
   height: auto;
   border-radius: 15px;
@@ -70,20 +73,15 @@ button:hover {
   display: block;
 }
 
-/* Foto visible con fade + zoom */
 #mensaje img.aparecer {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Oculto */
 .oculto {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: scale(0.8);
+  display: none !important;
 }
 
-/* Desaparecer */
 .desaparecer {
   opacity: 0;
   transition: opacity 0.5s ease;
